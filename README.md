@@ -15,7 +15,7 @@ To run the project user need to have python, django and django-rest-framework in
 ## Project Database
 The project uses mysql to connect to the database. For that user must have mysqlClient intalled in environment. The db name that was used in the project is 'search_app'.
 
-###### To install django-seed, run (without quotation):
+###### To install django-seed, run:
         pip install mysqlclient
 
 The project has some seed dumy data for 100+ developers, 7 programming languages and 4 language codes. For seeding the random developers, user must have django_seed module installed in the environment.
