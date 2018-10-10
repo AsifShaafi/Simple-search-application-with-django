@@ -39,7 +39,7 @@ class Developer(models.Model):
         return ', '.join([l.code for l in self.languages.all()])
 
     class Meta:
-        ordering = ["email"]
+        ordering = ["pk"]
 
 
 class SearchDeveloper(models.Model):
