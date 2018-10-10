@@ -1,0 +1,65 @@
+{% extends 'searchapp/base.html' %}
+
+{% block content %}
+
+    <div class="row col-md-8">
+        <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+                <span class="card-title">Developers who can write in ruby</span>
+                <ul>
+                    {% for lang in plan %}
+                        <li>
+                            <span>{{ lang }}</span>
+
+                        </li>
+                    {% endfor %}
+
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row col-md-8">
+        <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+                <span class="card-title">Developers who can write in ruby & javascript:</span>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>
+                            Developer
+                        </th>
+                        <th>
+                            Programming Languages
+                        </th>
+                        <th>
+                            Languages
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for developer in developers_who_can_write_multi_lang %}
+                        <tr>
+                            <td>
+                                {{ developer.developers.email }}
+                            </td>
+                            <td>
+                                {% for p_lan in developer.programming_languages %}
+                                    {{ p_lan }},
+                                {% endfor %}
+                            </td>
+                            <td>
+                                {% for lan in developer.languages %}
+                                    {{ lan }},
+                                {% endfor %}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
